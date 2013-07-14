@@ -1,0 +1,14 @@
+CC  = gcc
+
+INC = -I/include
+LIB = -L/lib -lc
+
+all: make25
+make25: make25.o
+  $(CC) -o $@ $<  $(LIB)
+
+make25.o: SDL/SDL.h SDL/SDL_image.h make25.c
+  $(CC) -c $< $(INC)
+
+clean:
+  rm -rf make25 make25.o
