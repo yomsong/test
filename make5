@@ -7,7 +7,7 @@ all: make5
 make5: make5.o
   $(CC) -o $@ $<  $(LIB)
 
-make5.o: SDL/SDL_ttf.h SDL/SDL_mixer.h make5.c
+make5.o: make5.c
   $(CC) -c $< $(INC)
   
 clean:
