@@ -3,12 +3,12 @@ CC  = gcc
 INC = -I/include
 LIB = -L/lib -lc
 
-all: make2
-make2: make2.o
+all: make3
+make3: make3.o
   $(CC) -o $@ $<  $(LIB)
 
-make2.o: SDL/SDL_ttf.h SDL/SDL_mixer.h make2.c
+make3.o: SDL/SDL_ttf.h SDL/SDL_mixer.h make3.c
   $(CC) -c $< $(INC)
   
 clean:
-  rm -rf make2 make2.o
+  rm -rf make3 make3.o
