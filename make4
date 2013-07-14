@@ -1,0 +1,14 @@
+CC  = gcc
+
+INC = -I/include
+LIB = -L/lib -lc
+
+all: make4
+make4: make4.o
+  $(CC) -o $@ $<  $(LIB)
+
+make4.o: SDL/SDL.h SDL/SDL_image.h make4.c
+  $(CC) -c $< $(INC)
+  
+clean:
+  rm -rf make4 make4.o
