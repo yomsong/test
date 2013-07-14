@@ -1,0 +1,14 @@
+CC  = gcc
+
+INC = -I/include
+LIB = -L/lib -lc
+
+all: test1
+test1: test1.o
+  $(CC) -o $@ $<  $(LIB)
+
+test1.o: test1.c
+  $(CC) -c $< $(INC)
+  
+clean:
+  rm -rf test1 test1.o
