@@ -1,0 +1,14 @@
+CC  = gcc
+
+INC = -I/include
+LIB = -L/lib -lc
+
+all: make5
+make5: make5.o
+  $(CC) -o $@ $<  $(LIB)
+
+make5.o: SDL/SDL_ttf.h SDL/SDL_mixer.h make5.c
+  $(CC) -c $< $(INC)
+  
+clean:
+  rm -rf make5 make5.o
