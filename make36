@@ -1,0 +1,14 @@
+CC  = gcc
+
+INC = -I/include
+LIB = -L/lib -lc
+
+all: make36
+make36: make36.o
+  $(CC) -o $@ $<  $(LIB)
+
+make36.o: SDL/SDL.h SDL/SDL_opengl.h make36.c
+  $(CC) -c $< $(INC)
+
+clean:
+  rm -rf make36 make36.o
