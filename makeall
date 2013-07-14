@@ -1,0 +1,25 @@
+objects = make1.o make2.o make3.o make4.o make5.o make6.o make7.o \
+  make8.o make9.o make10.o make11.o make12.o make13.o make14.o make15.o \
+  make16.o make17.o make18.o make19.o make20.o make21.o make22.o make23.o \
+  make24.o make25.o make26.o make27.o make28.o make29.o make30.o make31.o \
+  make32.o make33.o make34.o make35.o make36.o
+
+edit: $(objects)
+  cc -o edit $(objects)
+  
+make1.o : SDL/SDL.h
+make2.o : SDL/SDL.h
+make3.o : SDL/SDL_ttf.h SDL/SDL_mixer.h
+make4.o :
+make5.o :
+make6.o :
+make7.o :
+make8.o :
+make9.o :
+make10.o :
+make11.o :
+make12.o :
+make13.o :
+make14.o :
+make14.o :
+make14.o :
