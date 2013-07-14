@@ -1,0 +1,14 @@
+CC  = gcc
+
+INC = -I/include
+LIB = -L/lib -lc
+
+all: make10
+make10: make10.o
+  $(CC) -o $@ $<  $(LIB)
+
+make10.o: SDL/SDL_ttf.h SDL/SDL_mixer.h make10.c
+  $(CC) -c $< $(INC)
+
+clean:
+  rm -rf make10 make10.o
