@@ -1,0 +1,14 @@
+CC  = gcc
+
+INC = -I/include
+LIB = -L/lib -lc
+
+all: make32
+make32: make32.o
+  $(CC) -o $@ $<  $(LIB)
+
+make32.o: SDL/SDL.h SDL/SDL_image.h make32.c
+  $(CC) -c $< $(INC)
+
+clean:
+  rm -rf make32 make32.o
