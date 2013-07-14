@@ -1,0 +1,14 @@
+CC  = gcc
+
+INC = -I/include
+LIB = -L/lib -lc
+
+all: make6
+make6: make6.o
+  $(CC) -o $@ $<  $(LIB)
+
+make6.o: make6.c
+  $(CC) -c $< $(INC)
+  
+clean:
+  rm -rf make6 make6.o
