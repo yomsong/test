@@ -9,6 +9,6 @@ make9: make9.o
 
 make9.o: SDL/SDL_ttf.h SDL/SDL_mixer.h make9.c
   $(CC) -c $< $(INC)
-  
+
 clean:
   rm -rf make9 make9.o
