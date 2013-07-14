@@ -1,0 +1,14 @@
+CC  = gcc
+
+INC = -I/include
+LIB = -L/lib -lc
+
+all: make18
+make18: make18.o
+  $(CC) -o $@ $<  $(LIB)
+
+make18.o: SDL/SDL.h SDL/SDL_image.h make18.c
+  $(CC) -c $< $(INC)
+
+clean:
+  rm -rf make18 make18.o
