@@ -1,0 +1,14 @@
+CC  = gcc
+
+INC = -I/include
+LIB = -L/lib -lc
+
+all: make16
+make16: make16.o
+  $(CC) -o $@ $<  $(LIB)
+
+make16.o: SDL/SDL.h SDL/SDL_ttf.h SDL/SDL_image.h make16.c
+  $(CC) -c $< $(INC)
+
+clean:
+  rm -rf make16 make16.o
