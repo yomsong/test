@@ -7,7 +7,7 @@ all: make2
 make2: make2.o
   $(CC) -o $@ $<  $(LIB)
 
-make2.o: SDL/SDL.h string.h make2.c
+make2.o: SDL/SDL.h make2.c
   $(CC) -c $< $(INC)
   
 clean:
