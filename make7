@@ -1,0 +1,14 @@
+CC  = gcc
+
+INC = -I/include
+LIB = -L/lib -lc
+
+all: make7
+make7: make7.o
+  $(CC) -o $@ $<  $(LIB)
+
+make7.o: SDL/SDL_ttf.h SDL/SDL_image.h make7.c
+  $(CC) -c $< $(INC)
+  
+clean:
+  rm -rf make7 make7.o
