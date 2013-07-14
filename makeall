@@ -6,20 +6,44 @@ objects = make1.o make2.o make3.o make4.o make5.o make6.o make7.o \
 
 edit: $(objects)
   cc -o edit $(objects)
-  
+
 make1.o : SDL/SDL.h
 make2.o : SDL/SDL.h
 make3.o : SDL/SDL_ttf.h SDL/SDL_mixer.h
-make4.o :
-make5.o :
-make6.o :
-make7.o :
-make8.o :
-make9.o :
-make10.o :
-make11.o :
-make12.o :
-make13.o :
-make14.o :
-make14.o :
-make14.o :
+make4.o : SDL/SDL.h SDL/SDL_image.h
+make5.o : SDL/SDL_ttf.h SDL/SDL_mixer.h
+make6.o : SDL/SDL_tth.h
+make7.o : SDL/SDL_ttf.h SDL/SDL_image.h
+make8.o : SDL/SDL_ttf.h
+make9.o : SDL/SDL_ttf.h SDL/SDL_mixer.h
+make10.o : SDL/SDL_ttf.h SDL/SDL_mixer.h
+make11.o : SDL/SDL_ttf.h SDL/SDL_mixer.h
+make12.o : SDL/SDL.h SDL/SDL_ttf.h SDL/SDL_image.h
+make13.o : SDL/SDL.h SDL/SDL_ttf.h SDL/SDL_image.h
+make14.o : SDL/SDL.h SDL/SDL_ttf.h SDL/SDL_image.h
+make15.o : SDL/SDL.h SDL/SDL_ttf.h SDL/SDL_image.h
+make16.o : SDL/SDL.h SDL/SDL_ttf.h SDL/SDL_image.h
+make17.o : SDL/SDL.h SDL/SDL_ttf.h SDL/SDL_image.h
+make18.o : SDL/SDL.h SDL/SDL_image.h
+make19.o : SDL/SDL.h SDL/SDL_image.h
+make20.o : SDL/SDL.h SDL/SDL_image.h
+make21.o : SDL/SDL.h SDL/SDL_image.h
+make22.o : SDL/SDL.h SDL/SDL_image.h
+make23.o : SDL/SDL.h SDL/SDL_image.h
+make24.o : SDL/SDL.h SDL/SDL_image.h
+make25.o : SDL/SDL.h SDL/SDL_image.h
+make26.o : SDL/SDL.h SDL/SDL_image.h
+make27.o : SDL/SDL.h SDL/SDL_image.h
+make28.o : SDL/SDL.h SDL/SDL_image.h
+make29.o : SDL/SDL.h SDL/SDL_image.h
+make30.o : SDL/SDL.h SDL/SDL_image.h
+make31.o : SDL/SDL.h SDL/SDL_image.h
+make32.o : SDL/SDL.h SDL/SDL_image.h
+make33.o : SDL/SDL.h SDL/SDL_image.h SDL/SDL_thread.h
+make34.o : SDL/SDL.h SDL/SDL_image.h SDL/SDL_thread.h
+make35.o : SDL/SDL.h SDL/SDL_image.h SDL/SDL_thread.h
+make36.o : SDL/SDL.h SDL/SDL_image.h SDL/SDL_thread.h
+
+
+clean :
+        -rm edit $(objects)
