@@ -7,7 +7,7 @@ all: make6
 make6: make6.o
   $(CC) -o $@ $<  $(LIB)
 
-make6.o: make6.c
+make6.o: SDL/SDL_tth.h make6.c
   $(CC) -c $< $(INC)
   
 clean:
